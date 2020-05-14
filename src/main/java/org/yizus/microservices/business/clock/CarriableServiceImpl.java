@@ -12,12 +12,13 @@ public class CarriableServiceImpl implements CarriableService {
         rail = new LinkedBlockingDeque<>(capacity);
     }
     
-    public void popToNext() { nextRail.flush(rail.pollFirst()); }
+    public void popToNext() { //nextRail.flush(rail.pollFirst());
+     }
 
     @Override
     public void flush(Integer ball) {
         // TODO Auto-generated method stub
-        pushOrFlush(ball, this, feed, nextRail);
+    //    pushOrFlush(ball, this, feed, nextRail);
 
     }
 
