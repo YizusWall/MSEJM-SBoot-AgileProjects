@@ -30,12 +30,11 @@ apply plugin: 'groovy'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
-apply plugin: 'checkstyle'
 //apply plugin: 'findbugs'
 apply plugin: "jacoco"
 
 jar {
-    baseName = 'dia3'
+    baseName = 'TesAssestmentApp'
     version = '0.0.1-SNAPSHOT'
 }
 sourceCompatibility = 1.8
@@ -64,10 +63,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     runtime('com.h2database:h2')
     compileOnly('org.projectlombok:lombok')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile 'org.codehaus.groovy:groovy-all:2.4.8'
-    testCompile 'org.spockframework:spock-core:1.1-groovy-2.4-rc-4'
-
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 //para evitar que no descargue todas las fuentes
